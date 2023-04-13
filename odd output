@@ -1,0 +1,42 @@
+#include <stdio.h>
+//홀수인지 확인
+//check if odd number
+int prime_check(int n) 
+{
+	int cnt = 0;
+	for (int i = 1; i <= n; i++)
+	{
+		if (n % i == 0)
+			cnt += 1;
+	}
+	if (cnt == 2)
+		return 1;
+	else
+		return 0;
+}
+
+int main(void)
+{
+	//n은 입력값, r은 홀수인지 확인하는 값, l은 줄바꿈을 하기위한 변수(5이상이면 줄바꿈)
+	//n is the input value, r is the value to check whether it is an odd number, and l is a variable for line break(If it's 5 or more, a line break)
+	int n, r, l = 0;
+
+	printf("양수 입력 : ");
+	scanf_s("%d", &n);
+	for (int i = 1; i <= n; i++)
+	{
+		r = prime_check(i);
+		if (r == 1)
+		{
+			printf("%4d", i);
+			l += 1;
+			if (l == 5)
+			{
+				printf("\n");
+				l = 0;
+			}
+
+		}
+	}
+	return 0;
+}
