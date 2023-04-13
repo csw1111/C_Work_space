@@ -1,6 +1,7 @@
 #include <stdio.h>
-
-int yun(year)//윤년인지 계산
+//윤년인지 계산
+//Calculate whether it is a leap year
+int yun(year)
 {
 	if (year % 4 == 0)
 	{
@@ -26,9 +27,11 @@ int yun(year)//윤년인지 계산
 	}
 
 }
-
-int DAY(month, year)//1년 1월 부터 입력한 년, 월의 전 달까지의 날짜 계산 및 입력한 월의 날짜가 몇 일인지 계산(28일, 29일, 30일, 31일)
-{	//B는 입력한 월이 몇 일(28일, 29일, 30일, 31일)까지 있는지 받는 변수
+//1년 1월부터 입력한 연도의 이전 달까지의 일수(28일, 29일, 30일, 31일)까지 계산 및 입력한 달의 일수(28일, 29일, 30일, 31일)를 계산
+//Calculate the number of days (28th, 29th, 30th, 31st) from 1year january to the previous month of the entered year or calculate the number of days (28th, 29th, 30th, 31st) of the entered month
+int DAY(month, year)
+{	//B는 입력한 달의 일수(28일, 29일, 30일, 31일)를 받는 변수
+	//B is a variable that receives the number of days (28, 29, 30, 31 days) of the month you entered
 	int day = 0, B;
 	if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
 	{
@@ -63,7 +66,9 @@ int DAY(month, year)//1년 1월 부터 입력한 년, 월의 전 달까지의 �
 int main(void)
 {
 	//B는 입력한 월이 몇 일(28일, 29일, 30일, 31일)까지 있는지 받는 변수
+	//B is a variable that receives the number of days (28, 29, 30, 31 days) of the month you entered
 	//b는 윤년인지 확인하는 변수
+	//b is a variable that determines whether it is leap year or not
 	int year = 1, month, b, d, B;
 	while (year != 0)
 	{
