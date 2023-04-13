@@ -1,0 +1,31 @@
+# include  <stdio.h>
+
+int main(void)
+{
+	int a, b, c, d;
+	int cnt1 = 0, cnt2 = 0, cnt3 = 0, cnt4 = 0, cnt5 = 0, cnt6 = 0;
+	printf("세 개의 물건값을 입력하세요 : ");
+	scanf_s("%d %d %d", &a, &b, &c);
+	d = 10000 - (a + b + c);
+	printf("거스름돈은 %d원입니다.\n", d);
+	
+	cnt1 = d / 5000;
+	d -= d / 5000 * 5000;
+	cnt2 = d / 1000;
+	d -= d / 1000 * 1000;
+	cnt3 = d / 500;
+	d -= d / 500 * 500;
+	cnt4 = d / 100;
+	d -= d / 100 * 100;
+	cnt5 = d / 50;
+	d -= d / 50 * 50;
+	cnt6 = d / 10;
+	d -= d / 10 * 10;
+
+	printf("오천원권 : %d\n", cnt1);
+	printf("천원권 : %d\n", cnt2);
+	printf("오백원짜리 동전 : %d\n", cnt3);
+	printf("백원짜리 동전 : %d\n", cnt4);
+	printf("오십원짜리 동전 : %d\n", cnt5);
+	printf("십원짜리 동전 : %d\n", cnt6);
+}
